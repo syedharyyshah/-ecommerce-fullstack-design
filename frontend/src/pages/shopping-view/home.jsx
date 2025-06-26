@@ -1,7 +1,4 @@
 import React from 'react';
-import LeftSide from '../slider/leftSide';
-import RightSide from '../slider/rightSide';
-import MiddleSide from '../slider/middleSide';
 import ProductsGrid from '../shopProductsGrid/ProductsGrid';
 import ProductsGrid2 from '../shopProductsGrid/ProductsGrid2';
 import ProductsGrid3 from '../shopProductsGrid/ProductsGrid3';
@@ -10,6 +7,9 @@ import ProductsGrid4 from '../shopProductsGrid/ProductsGrid4';
 import ProductsGrid5 from '../shopProductsGrid/ProductsGrid5';
 import Subscribe from './Subscribe';
 import Footer from './Footer';
+import LeftSide from '../slider/LeftSide';
+import RightSide from '../slider/RightSide';
+import MiddleSide from '../slider/MiddleSide';
 
 const Home = () => {
   return (
