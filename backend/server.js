@@ -23,10 +23,7 @@ connectDB();
 // Middleware
 app.use(
     cors({
-        origin: [
-            process.env.CLIENT_URL,
-            "https://ecommerce-fullstack-design-xgez.vercel.app"
-        ],
+        origin: process.env.CLIENT_URL,
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization", "Cache-Control", "Expires", "Pragma"],
         credentials: true
