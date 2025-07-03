@@ -21,14 +21,12 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(
-    cors({
-        origin: process.env.CLIENT_URL,
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        allowedHeaders: ["Content-Type", "Authorization", "Cache-Control", "Expires", "Pragma"],
-        credentials: true
-    })
-);
+cors({
+    origin: process.env.CLIENT_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization", "Cache-Control", "Expires", "Pragma"],
+    credentials: true
+})
 app.use(cookieParser());
 app.use(express.json());
 
