@@ -52,6 +52,12 @@ app.use("/api/shop/review", shopReviewRouter);
 
 
 app.use("/api/common/feature", commonFeatureRouter);
+app.get('/',(req,res)=>{
+   res.send({
+    activeStatus:true,
+    error:false,
+   })
+})
 
 // Start Server
 const PORT = process.env.PORT || 8000;
