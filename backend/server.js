@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
         error: false,
         message: "Server is running"
     });
-});
+});   
 
 // Global error handler
 app.use((err, req, res, next) => {

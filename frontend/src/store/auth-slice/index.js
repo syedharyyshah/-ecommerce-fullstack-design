@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      "https://ecommerce-fullstack-design-x-git-eb411d-syedharyyshahs-projects.vercel.app/api/auth/check-auth",
+      "https://ecommerce-fullstack-design-xk67.vercel.app/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
