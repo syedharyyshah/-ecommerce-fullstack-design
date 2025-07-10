@@ -12,7 +12,7 @@ export const registerUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-      "https://ecommerce-fullstack-design-x-git-eb411d-syedharyyshahs-projects.vercel.app/api/auth/register",
+      "https://ecommerce-fullstack-design-xk67.vercel.app/api/auth/register",
       formData,
       {
         withCredentials: true,
