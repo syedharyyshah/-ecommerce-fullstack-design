@@ -26,6 +26,7 @@ app.use(cors({
         const allowedOrigins = [
             'https://ecommerce-fullstack-design-1by7.vercel.app',
             'https://ecommerce-fullstack-design-xgez.vercel.app',
+            'https://ecommerce-fullstack-design-ashy.vercel.app', // <-- Add this line
             'http://localhost:3000' // For local development
         ];
         if (!origin || allowedOrigins.includes(origin)) {
