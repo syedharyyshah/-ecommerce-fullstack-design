@@ -24,12 +24,12 @@ connectDB();
 app.use(cors({
     origin: (origin, callback) => {
         const allowedOrigins = [
-            'https://ecommerce-fullstack-design-xgez.vercel.app', // Updated to match the frontend origin
-            'https://ecommerce-fullstack-design-1by7.vercel.app', // Previous frontend origin
+            'https://ecommerce-fullstack-design-1by7.vercel.app',
+            'https://ecommerce-fullstack-design-xgez.vercel.app',
             'http://localhost:3000' // For local development
         ];
         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, origin); // Return the specific origin instead of `true`
+            callback(null, origin);
         } else {
             callback(new Error('Not allowed by CORS'));
         }
@@ -37,7 +37,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cache-Control', 'Expires', 'Pragma'],
     credentials: true,
-    optionsSuccessStatus: 204 // Ensure preflight requests return 204 status
+    optionsSuccessStatus: 204
 }));
 app.use(cookieParser());
 app.use(express.json());
@@ -64,11 +64,11 @@ app.get('/', (req, res) => {
 
 // Global error handler
 app.use((err, req, res, next) => {
-    console.error(err.stack);
+    console.error('Error occurred:', err.stack);
     if (err.message === 'Not allowed by CORS') {
         return res.status(403).json({ error: 'CORS policy violation' });
     }
-    res.status(500).json({ error: 'Something went wrong!' });
+    res.status(500).json({ error: 'Something went wrong!', details: err.message });
 });
 
 // Export for Vercel
