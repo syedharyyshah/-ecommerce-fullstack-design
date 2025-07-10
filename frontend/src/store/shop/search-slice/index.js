@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Use the correct port (8000) or environment variable
-const API_BASE_URL =  "http://localhost:5000";
+const API_BASE_URL = "https://ecommerce-fullstack-design-x-git-eb411d-syedharyyshahs-projects.vercel.app";
 
 const initialState = {
   isLoading: false,
